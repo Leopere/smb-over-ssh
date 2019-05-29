@@ -1,0 +1,46 @@
+version: '3.4'
+
+services:
+  sshd:
+    build: .
+    restart: always
+    volumes:
+      - './ssh/authorized_keys:/root/.ssh/authorized_keys'
+    ports:
+      - '22:22'
+    networks:
+      - samba
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
+  samba:
+    image: dperson/samba
+    restart: always
+    environment:
+      TZ: 'EST5EDT'
+    networks:
+      - samba
+    expose:
+      - 137
+      - 138
+      - 139
+      - 445
+    read_only: true
+    tmpfs:
+      - /tmp
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    volumes:
+      - /mnt:/mnt:z
+    command: '-s "Mount;/mnt"'
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
+
+networks:
+  samba:

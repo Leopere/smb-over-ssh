@@ -1,37 +1,18 @@
 version: '3.4'
 
 services:
-  # sshd:
-  #   build: .
-  #   restart: always
-  #   volumes:
-  #     - './ssh/authorized_keys:/root/.ssh/authorized_keys:ro'
-  #   ports:
-  #     - '22445:22'
-  #   networks:
-  #     - samba
-  #   logging:
-  #     driver: "json-file"
-  #     options:
-  #       max-size: "200k"
-  #       max-file: "10"
   samba:
     build: .
     restart: always
     environment:
       TZ: 'EST5EDT'
-    # networks:
-    #   - samba
-    expose:
-      - 137
-      - 138
-      - 139
-      - 445
+    # expose:
+      # - 137
+      # - 138
+      # - 139
+      # - 445
     ports:
       - '22445:22'
-    # read_only: true
-    # tmpfs:
-    #   - /tmp
     stdin_open: true
     tty: true
     volumes:
@@ -42,6 +23,3 @@ services:
       options:
         max-size: "200k"
         max-file: "10"
-
-# networks:
-#   samba:

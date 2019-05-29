@@ -12,7 +12,9 @@ RUN apk add --no-cache --no-progress --update openssh \
         sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config && \
         sed -ri 's/UsePAM yes/# UsePAM yes/g' /etc/ssh/sshd_config && \
         sed -ri 's/^#?PasswordAuthentication\s+.*/PasswordAuthentication no/g' /etc/ssh/sshd_config && \
-        sed -ri 's/^#?AllowTcpForwarding\s+.*/AllowTcpForwarding no/g' /etc/ssh/sshd_config && \
+        sed -ri 's/^#?AllowTcpForwarding\s+.*/AllowTcpForwarding yes/g' /etc/ssh/sshd_config && \
+        sed -ri 's/^#?GatewayPorts\s+.*/GatewayPorts yes/g' /etc/ssh/sshd_config && \
+        sed -ri 's/^#?PermitTunnel\s+.*/PermitTunnel yes/g' /etc/ssh/sshd_config && \
     mkdir /root/.ssh
 
 ## Copy insecure samba config into container.

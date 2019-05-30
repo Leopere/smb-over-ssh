@@ -1,0 +1,82 @@
+{
+  "scroll": {
+    "height": 35000,
+    "heightOverflow": "hidden",
+    "width": 750,
+    "widthOverflow": "hidden"
+  },
+  "scrollBox": {
+    "height": 35000,
+    "heightOverflow": "hidden",
+    "width": 750,
+    "widthOverflow": "hidden"
+  },
+  "title": "How to use Time Machine to back up your Mac to a Windows shared folder | iMore",
+  "type": "phz",
+  "url": "https://www.imore.com/how-use-time-machine-backup-your-mac-windows-shared-folder",
+  "version": "4.0.0",
+  "browser": {
+    "id": 1,
+    "profile": "BROWSER",
+    "offscreen": false,
+    "show": true,
+    "nodeIntegration": true,
+    "navigation": {
+      "navigated": {
+        "delegate": {
+          "queue": {},
+          "delegate": {
+            "events": {
+              "event": {
+                "listeners": [
+                  null
+                ],
+                "name": "event"
+              }
+            }
+          }
+        }
+      },
+      "captured": {
+        "delegate": {
+          "queue": {},
+          "delegate": {
+            "events": {
+              "event": {
+                "listeners": [],
+                "name": "event"
+              }
+            }
+          }
+        }
+      }
+    },
+    "useReactor": false,
+    "webaudio": true,
+    "hosted": true,
+    "destroy": true,
+    "inactive": false,
+    "description": "Galaxy S8 mobile device running Chrome 66 but with width at 750",
+    "deviceEmulation": {
+      "screenPosition": "mobile",
+      "screenSize": {
+        "width": 750,
+        "height": 35000
+      },
+      "viewSize": {
+        "width": 750,
+        "height": 35000
+      },
+      "viewPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "deviceScaleFactor": 0,
+      "scale": 1
+    },
+    "name": "MOBILE_GALAXY_S8_WITH_CHROME_66_WIDTH_750",
+    "type": "phone",
+    "title": "Galaxy S8",
+    "userAgent": "Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36"
+  }
+}

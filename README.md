@@ -1,7 +1,7 @@
 # smb-over-ssh
 Smb-over-ssh is an option if you wish to spin up a relatively secure and functional by default Samba share over SSH.  
 
-Why on earth would you want to do this?  Well one of the things that can be accomplished with this is remote Time Machine backups if you follow [this pdf](/docs/TimeMachine-to-smb.pdf) to a degree you can get this working with some SSH tunnel magic.
+Why on earth would you want to do this?  Well one of the things that can be accomplished with this is remote Time Machine backups if you follow [this pdf](/docs/TimeMachine-to-smb/12aP37Bo5ShsTeuxhVdN.html) to a degree you can get this working with some SSH tunnel magic.
 
 ## Instructions
 
@@ -51,6 +51,6 @@ Host www.REPLACEME.com
 `ssh www.REPLACEME.com sleep 60` This opens up the tunnel to the target server and remains open for 60 seconds of inactivity.  If you don't use the connection it will just die off and go away.  Feel free to remove the `sleep 60` if you want different behavior.
 
 #### Step 6: Run through the suggestions in the included PDF [OS X Client Side]
-[This guide](/docs/TimeMachine-to-smb.pdf) is not specifically for this but it will get you to a destination where you can time machine backup to your target server.  
+[This guide](/docs/TimeMachine-to-smb/12aP37Bo5ShsTeuxhVdN.html) is not specifically for this but it will get you to a destination where you can time machine backup to your target server.  
 
 Otherwise theres really no restriction to what you can do with this guest user access with read/write permissions Samba share.  You'd imagine guest access with read write would sound dangerous however you cannot access this Samba share without using SSH keys so that's been proven as pretty bullet resistant so I figured keep it simple.

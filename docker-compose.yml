@@ -6,6 +6,7 @@ services:
     restart: always
     environment:
       TZ: 'EST5EDT'
+    ## You're welcomed to experiment with the other ports but I only tested forwarding 445
     # expose:
       # - 137
       # - 138
